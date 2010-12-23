@@ -23,7 +23,13 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "bio-isoelectric_point.gemspec",
     "lib/bio-isoelectric_point.rb",
+    "lib/isoelectric_point/aa.rb",
+    "lib/isoelectric_point/extensions.rb",
+    "lib/isoelectric_point/pka_data.rb",
+    "test/aa_test.rb",
+    "test/extensions_test.rb",
     "test/helper.rb",
     "test/test_bio-isoelectric_point.rb"
   ]
