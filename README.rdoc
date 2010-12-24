@@ -2,9 +2,10 @@
 
 The isoelectric point (pI), sometimes abbreviated to iep, is the pH at which a particular molecule or surface carries no net electrical charge.
 
-This library is a ruby implementation for calculating the iep of a protein, based on bioperl’s approach. It can be installed as a bioruby-pugin.
+This library is a ruby implementation for calculating the isoelectric point of a protein, based on the bioperl’s approach. It can be installed as a bioruby-plugin.
 
 Support for the following Pka sets is available
+
     * dta_select
     * emboss
     * rodwell
@@ -15,8 +16,12 @@ You can also create a custom Pka set as shown in the example
 
 == Installation
 
-gem install bio-isoelectric_point
+ gem install bio-isoelectric_point
 
+== Uninstallation
+
+ gem uninstall bio-isoelectric_point
+ 
 == Usage
 
 	require 'bio-isoelectric_point'
