@@ -32,7 +32,6 @@ You can also create a custom Pka set as shown in the example
  	charge = protein_seq.calculate_charge_at(14)     #=>-2.999795857467562
 
  	#calculate the ph using dtaselect pka set and round off to 3 decimal places
-
  	isoelectric_point = protein_seq.calculate_iep('dtaselect', 3)   #=>8.219
 
 	 # calculate the iep ph with a custom set
