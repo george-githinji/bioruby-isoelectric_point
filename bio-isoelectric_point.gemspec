@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George Githinji", "Pascal Betz"]
-  s.date = %q{2010-12-24}
+  s.date = %q{2010-12-25}
   s.description = %q{The isoelectric point (pI), sometimes abbreviated to iep, is the pH at which a particular molecule or surface carries no net electrical charge. }
   s.email = %q{georgkam@gmail.com}
   s.extra_rdoc_files = [
