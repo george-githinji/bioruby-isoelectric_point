@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bio-isoelectric_point"
   gem.homepage = "http://github.com/GeorgeG/bioruby-isoelectric_point"
   gem.license = "Ruby"
-  gem.summary = %Q{A bioruby plugin for calculating the isoelectric point of a protein. It can be installed as a bioruby plugin.}
-  gem.description = %Q{The isoelectric point (pI), sometimes abbreviated to iep, is the pH at which a particular molecule or surface carries no net electrical charge. }
+  gem.summary = %Q{A bioruby plugin for calculating the isoelectric point and the charge of a protein sequence.}
+  gem.description = %Q{A bioruby plugin for calculating the isoelectric point of a protein }
   gem.email = "georgkam@gmail.com"
   gem.authors = ["George Githinji","Pascal Betz"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
