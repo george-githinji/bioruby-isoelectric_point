@@ -12,6 +12,7 @@ module Bio
       # pka_name_or_set: the name of a PKA set or a custom PKA set
       # places: specify the number of decimal places the value should be rounded to.
       # loop_limit: how many iterations should be made to find the point. You should not need to tweak this.
+	#TODO to be renamed to isoelectric_point to preserve clarity
       def calculate_iep(pka_name_or_set = 'dtaselect', places = 2, loop_limit = 100)
         loops = 0
         ph = 7.5
@@ -32,6 +33,7 @@ module Bio
 
       # Calculate the charge of the sequence at a given ph
       # As a second argument you can pass the name of the PKA set or a custom PKA set
+	#To be renamed to charge at to preserve clarity
       def calculate_charge_at(ph, pka_name_or_set = 'dtaselect')
         ['K', 'R', 'H'].inject(partial_charge(select_pka(pka_name_or_set)['N_TERMINUS'], ph)) do |memo, item|
           memo += partial_charge(select_pka(pka_name_or_set)[item], ph) * charged_residue_frequencies[item]
@@ -82,3 +84,5 @@ module Bio
     end #class AA
   end #class Sequence
 end #module Bio
+#include a new class Bio::AA::Index for Pkas? suggestes by tokiashiki katayama
+
