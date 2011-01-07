@@ -1,3 +1,3 @@
-Copyright (c) 2010 George Githinji
+Copyright (c) 2011 George Githinji
 
 bioruby-isoelectric_point library can be freely distributed under the same terms as Ruby.
