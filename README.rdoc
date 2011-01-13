@@ -2,11 +2,11 @@
 
 The isoelectric point (pI), sometimes abbreviated to iep, is the pH at which a particular molecule or surface carries no net electrical charge.
 
-This library is a ruby implementation for calculating the isoelectric point of a protein, based on the bioperl’s approach. It can be installed as a bioruby-plugin.
+This library is a ruby implementation for estimating the isoelectric point of a protein, based on the bioperl’s approach. It can be installed as a bioruby-plugin.
 
 Support for the following Pka sets is available
 
-    * dta_select
+    * dtaselect
     * emboss
     * rodwell
     * wikipedia
@@ -29,10 +29,10 @@ You can also create a custom Pka set as shown in the example
 	protein_seq = Bio::Sequence::AA.new("KKGFTCGELA")
 
  	#what is the protein charge at ph 14?
- 	charge = protein_seq.calculate_charge_at(14)     #=>-2.999795857467562
+ 	charge = protein_seq.charge_at(14)     #=>-2.999795857467562
 
- 	#calculate the ph using dtaselect pka set and round off to 3 decimal places
- 	isoelectric_point = protein_seq.calculate_iep('dtaselect', 3)   #=>8.219
+ 	#calculate the pH using dtaselect pka set and round off to 3 decimal places
+ 	isoelectric_point = protein_seq.isoelectric_point('dtaselect', 3)   #=>8.219
 
 	 # calculate the iep ph with a custom set
 	 custom_pka_set = { "N_TERMINUS" => 8.1,
@@ -45,7 +45,7 @@ You can also create a custom Pka set as shown in the example
 	            "C" => 8.33,
 	            "Y" => 9.5
 	          }
-	 iep_ph = protein_seq.calculate_iep(custom_pka_set, 3)   #=> 8.193
+	 iep_ph = protein_seq.isoelectric_point(custom_pka_set, 3)   #=> 8.193
 	
 
 == Contributing to bio-isoelectric_point
@@ -60,6 +60,6 @@ You can also create a custom Pka set as shown in the example
 
 == Copyright
 
-Copyright (c) 2010 George Githinji. See LICENSE.txt for
+Copyright (c)2011 George Githinji. See LICENSE.txt for
 further details.
 
