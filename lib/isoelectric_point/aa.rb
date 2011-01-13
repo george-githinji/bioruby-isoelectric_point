@@ -13,12 +13,12 @@ module Bio
       # places: specify the number of decimal places the value should be rounded to.
       # loop_limit: how many iterations should be made to find the point. You should not need to tweak this.
 	#TODO to be renamed to isoelectric_point to preserve clarity
-      def calculate_iep(pka_name_or_set = 'dtaselect', places = 2, loop_limit = 100)
+      def isoelectric_point(pka_name_or_set = 'dtaselect', places = 2, loop_limit = 100)
         loops = 0
         ph = 7.5
         step = 3.5
         begin
-          current_charge = calculate_charge_at(ph, pka_name_or_set)
+          current_charge = charge_at(ph, pka_name_or_set)
           if current_charge > 0
             ph += step
           else
@@ -33,8 +33,8 @@ module Bio
 
       # Calculate the charge of the sequence at a given ph
       # As a second argument you can pass the name of the PKA set or a custom PKA set
-	#To be renamed to charge at to preserve clarity
-      def calculate_charge_at(ph, pka_name_or_set = 'dtaselect')
+
+      def charge_at(ph, pka_name_or_set = 'dtaselect')
         ['K', 'R', 'H'].inject(partial_charge(select_pka(pka_name_or_set)['N_TERMINUS'], ph)) do |memo, item|
           memo += partial_charge(select_pka(pka_name_or_set)[item], ph) * charged_residue_frequencies[item]
         end -
