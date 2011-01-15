@@ -69,7 +69,7 @@ module Bio
 
       #
       # Select a PKA set according to the name or supply a custom set.
-      # Raises ArgumentError if the name can not be mapped to a PKA set.
+      # Raises ArgumentError if the name can not be mapped to a Pka set.
       # If the argument is a String it is used as a key to lookup the set,
       # if it's a Hash then it's assumed a custom set has been supplied.
       def select_pka(pka_name_or_set = 'dtaselect')
