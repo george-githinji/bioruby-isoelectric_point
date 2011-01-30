@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{bio-isoelectric_point}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George Githinji", "Pascal Betz"]
-  s.date = %q{2010-12-25}
-  s.description = %q{The isoelectric point (pI), sometimes abbreviated to iep, is the pH at which a particular molecule or surface carries no net electrical charge. }
+  s.date = %q{2011-01-30}
+  s.description = %q{A bioruby plugin for calculating the isoelectric point of a protein }
   s.email = %q{georgkam@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -36,7 +36,7 @@ Gem::Specification.new do |s|
   s.licenses = ["Ruby"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{A bioruby plugin for calculating the isoelectric point of a protein. It can be installed as a bioruby plugin.}
+  s.summary = %q{A bioruby plugin for calculating the isoelectric point and the charge of a protein sequence.}
   s.test_files = [
     "test/aa_test.rb",
     "test/extensions_test.rb",
