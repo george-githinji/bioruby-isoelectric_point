@@ -12,7 +12,6 @@ module Bio
       # pka_name_or_set: the name of a PKA set or a custom PKA set
       # places: specify the number of decimal places the value should be rounded to.
       # loop_limit: how many iterations should be made to find the point. You should not need to tweak this.
-	#TODO to be renamed to isoelectric_point to preserve clarity
       def isoelectric_point(pka_name_or_set = 'dtaselect', places = 2, loop_limit = 100)
         loops = 0
         ph = 7.5
@@ -33,7 +32,6 @@ module Bio
 
       # Calculate the charge of the sequence at a given ph
       # As a second argument you can pass the name of the PKA set or a custom PKA set
-
       def charge_at(ph, pka_name_or_set = 'dtaselect')
         ['K', 'R', 'H'].inject(partial_charge(select_pka(pka_name_or_set)['N_TERMINUS'], ph)) do |memo, item|
           memo += partial_charge(select_pka(pka_name_or_set)[item], ph) * charged_residue_frequencies[item]
@@ -67,7 +65,6 @@ module Bio
         end
       end
 
-      #
       # Select a PKA set according to the name or supply a custom set.
       # Raises ArgumentError if the name can not be mapped to a Pka set.
       # If the argument is a String it is used as a key to lookup the set,
@@ -84,5 +81,5 @@ module Bio
     end #class AA
   end #class Sequence
 end #module Bio
-#include a new class Bio::AA::Index for Pkas? suggestes by tokiashiki katayama
+#include a new class Bio::AA::Index for Pkas? suggestion by tokiashiki katayama
 

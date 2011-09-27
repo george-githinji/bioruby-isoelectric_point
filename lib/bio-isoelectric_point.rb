@@ -1,9 +1,7 @@
 require 'bio'
-
 ['pka_data', 'extensions', 'aa'].each do |name|
   require File.join(File.expand_path(File.dirname(__FILE__)), 'isoelectric_point',"#{name}")
 end
-
 
 #   protein_seq = Bio::Sequence::AA.new("KKGFTCGELA")
 #

@@ -1,6 +1,5 @@
 module Bio
   class Sequence
-
     #It would be better to have a class for pKa, compatible with Bio::AAindex indices.Bio::AAindex
     class PkaData
       PKAS = {

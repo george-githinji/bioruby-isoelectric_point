@@ -1,10 +1,6 @@
-
- #require 'helper'
 require File.join(File.expand_path(File.dirname(__FILE__)),'helper')
 
-# include Bio::Sequence
 class AATest < Test::Unit::TestCase
-
   context 'some known sequences' do
     setup do
       # Values are taken from http://isoelectric.ovh.org/
