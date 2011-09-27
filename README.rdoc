@@ -2,17 +2,15 @@
 
 The isoelectric point (pI), sometimes abbreviated to iep, is the pH at which a particular molecule or surface carries no net electrical charge.
 
-This library is a ruby implementation for estimating the isoelectric point of a protein, based on the bioperl’s approach. It can be installed as a bioruby-plugin.
+This library is a Ruby implementation for estimating the isoelectric point of a protein.
 
-Support for the following Pka sets is available
-
+The following Pka sets are supported
     * dtaselect
     * emboss
     * rodwell
     * wikipedia
     * sillero
-
-You can also create a custom Pka set as shown in the example
+Custom Pka sets are also supported
 
 == Installation
 
@@ -23,18 +21,17 @@ You can also create a custom Pka set as shown in the example
  gem uninstall bio-isoelectric_point
  
 == Usage
+ require 'bio-isoelectric_point'
 
-	require 'bio-isoelectric_point'
+ protein_seq = Bio::Sequence::AA.new("KKGFTCGELA")
 
-	protein_seq = Bio::Sequence::AA.new("KKGFTCGELA")
+ #what is the protein charge at ph 14?
+ charge = protein_seq.charge_at(14)     #=>-2.999795857467562
 
- 	#what is the protein charge at ph 14?
- 	charge = protein_seq.charge_at(14)     #=>-2.999795857467562
+ #calculate the pH using dtaselect pka set and round off to 3 decimal places
+ isoelectric_point = protein_seq.isoelectric_point('dtaselect', 3)   #=>8.219
 
- 	#calculate the pH using dtaselect pka set and round off to 3 decimal places
- 	isoelectric_point = protein_seq.isoelectric_point('dtaselect', 3)   #=>8.219
-
-	 # calculate the iep ph with a custom set
+ #calculate the iep ph with a custom set
 	 custom_pka_set = { "N_TERMINUS" => 8.1,
 	            "K" => 10.1,
 	            "R" => 12.1,
@@ -46,20 +43,17 @@ You can also create a custom Pka set as shown in the example
 	            "Y" => 9.5
 	          }
 	 iep_ph = protein_seq.isoelectric_point(custom_pka_set, 3)   #=> 8.193
-	
 
 == Contributing to bio-isoelectric_point
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
 * Start a feature/bugfix branch
 * Commit and push until you are happy
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
 == Copyright
-
-Copyright (c)2011 George Githinji. See LICENSE.txt for
-further details.
+Copyright (c)2011 George Githinji.
+See LICENSE.txt for more details.
 
