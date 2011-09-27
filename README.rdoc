@@ -36,13 +36,13 @@ The following Pka sets are supported
  custom_pka_set = { "N_TERMINUS" => 8.1,
                     "C_TERMINUS" => 3.15,
                              "K" => 10.1,
-	                           "R" => 12.1,
-	                           "H" => 6.4,
-	                  	       "D" => 4.34,
-	                           "E" => 4.33,
-	                           "C" => 8.33,
-	                           "Y" => 9.5
-	                }
+                             "R" => 12.1,
+                             "H" => 6.4,
+                             "D" => 4.34,
+                             "E" => 4.33,
+                             "C" => 8.33,
+                             "Y" => 9.5
+                  }
  iep_ph = protein_seq.isoelectric_point(custom_pka_set, 3) #=> 8.193
 
 == Contributing to bio-isoelectric_point
