@@ -10,7 +10,7 @@ The following Pka sets are supported
     * rodwell
     * wikipedia
     * sillero
-Custom Pka sets are also supported
+    *Custom Pka sets are also supported
 
 == Installation
 
@@ -23,26 +23,27 @@ Custom Pka sets are also supported
 == Usage
  require 'bio-isoelectric_point'
 
+ #create  a protein sequence amino acid object
  protein_seq = Bio::Sequence::AA.new("KKGFTCGELA")
 
  #what is the protein charge at ph 14?
  charge = protein_seq.charge_at(14)     #=>-2.999795857467562
 
  #calculate the pH using dtaselect pka set and round off to 3 decimal places
- isoelectric_point = protein_seq.isoelectric_point('dtaselect', 3)   #=>8.219
+ isoelectric_point = protein_seq.isoelectric_point('dtaselect', 3) #=>8.219
 
  #calculate the iep ph with a custom set
-	 custom_pka_set = { "N_TERMINUS" => 8.1,
-	            "K" => 10.1,
-	            "R" => 12.1,
-	            "H" => 6.4,
-	            "C_TERMINUS" => 3.15,
-	            "D" => 4.34,
-	            "E" => 4.33,
-	            "C" => 8.33,
-	            "Y" => 9.5
-	          }
-	 iep_ph = protein_seq.isoelectric_point(custom_pka_set, 3)   #=> 8.193
+ custom_pka_set = { "N_TERMINUS" => 8.1,
+                    "C_TERMINUS" => 3.15,
+                             "K" => 10.1,
+	                           "R" => 12.1,
+	                           "H" => 6.4,
+	                  	       "D" => 4.34,
+	                           "E" => 4.33,
+	                           "C" => 8.33,
+	                           "Y" => 9.5
+	                }
+ iep_ph = protein_seq.isoelectric_point(custom_pka_set, 3) #=> 8.193
 
 == Contributing to bio-isoelectric_point
  
