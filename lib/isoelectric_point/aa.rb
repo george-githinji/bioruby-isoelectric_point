@@ -81,5 +81,3 @@ module Bio
     end #class AA
   end #class Sequence
 end #module Bio
-#include a new class Bio::AA::Index for Pkas? suggestion by tokiashiki katayama
-
