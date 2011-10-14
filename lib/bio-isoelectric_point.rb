@@ -10,8 +10,6 @@ end
 #
 # 	#calculate the pH using dtaselect pka set and round off to 3 decimal places
 # 	isoelectric_point = protein_seq.isoelectric_point('dtaselect', 3)   #=>8.219
-#  
-#   puts charge
-#   puts isoelectric_point
 #
-#  
+#   puts charge
+#   puts isoelectric_point:
