@@ -57,3 +57,5 @@ module Bio
     end
   end
 end
+#Refactor this to a class Bio::AA::Index for Pkas? suggestion by Toshiaki Katayama
+
