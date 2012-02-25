@@ -1,4 +1,4 @@
-require 'rubygems'
+#require 'rubygems'
 require 'bundler'
 begin
   Bundler.setup(:default, :development)
@@ -14,5 +14,5 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'bio-isoelectric_point'
 
-class Test::Unit::TestCase
-end
+#class Test::Unit::TestCase
+#end
