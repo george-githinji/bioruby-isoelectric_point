@@ -1,4 +1,4 @@
-require 'test_helper'
+require File.join(File.expand_path(File.dirname(__FILE__)),'helper')
 class ExtensionsTest < Test::Unit::TestCase
   context 'float' do
     setup do
