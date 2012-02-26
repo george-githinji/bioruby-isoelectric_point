@@ -1,3 +1,4 @@
+{<img src="https://secure.travis-ci.org/georgeG/bioruby-isoelectric_point.png?branch=master" alt="Build Status" />}[http://travis-ci.org/georgeG/bioruby-isoelectric_point]
 = bio-isoelectric_point
 
 The isoelectric point (pI), sometimes abbreviated to iep, is the pH at which a particular molecule or surface carries no net electrical charge.
