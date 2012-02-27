@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George Githinji", "Pascal Betz"]
-  s.date = "2012-02-25"
+  s.date = "2012-02-27"
   s.description = "A bioruby plugin for calculating the isoelectric point of a protein "
   s.email = "georgkam@gmail.com"
   s.extra_rdoc_files = [
@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
     "README.rdoc"
   ]
   s.files = [
+    ".travis.yml",
     "Gemfile",
     "LICENSE.txt",
     "README.rdoc",
@@ -32,7 +33,7 @@ Gem::Specification.new do |s|
     "test/helper.rb",
     "test/test_bio-isoelectric_point.rb"
   ]
-  s.homepage = "http://github.com/GeorgeG/bioruby-isoelectric_point"
+  s.homepage = "http://github.com/georgeG/bioruby-isoelectric_point"
   s.licenses = ["Ruby"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.17"
@@ -43,18 +44,18 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<shoulda>, ["~> 2.11.3"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.1.rc.7"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.0.22"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.3"])
       s.add_development_dependency(%q<bio>, [">= 1.4.2"])
     else
       s.add_dependency(%q<shoulda>, ["~> 2.11.3"])
-      s.add_dependency(%q<bundler>, ["~> 1.1.rc.7"])
+      s.add_dependency(%q<bundler>, ["~> 1.0.22"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.3"])
       s.add_dependency(%q<bio>, [">= 1.4.2"])
     end
   else
     s.add_dependency(%q<shoulda>, ["~> 2.11.3"])
-    s.add_dependency(%q<bundler>, ["~> 1.1.rc.7"])
+    s.add_dependency(%q<bundler>, ["~> 1.0.22"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.3"])
     s.add_dependency(%q<bio>, [">= 1.4.2"])
   end
