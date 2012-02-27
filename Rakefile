@@ -13,7 +13,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "bio-isoelectric_point"
-  gem.homepage = "http://github.com/GeorgeG/bioruby-isoelectric_point"
+  gem.homepage = "http://github.com/georgeG/bioruby-isoelectric_point"
   gem.license = "Ruby"
   gem.summary = %Q{A bioruby plugin for calculating the isoelectric point and the charge of a protein sequence.}
   gem.description = %Q{A bioruby plugin for calculating the isoelectric point of a protein }
