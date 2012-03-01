@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "bio-isoelectric_point"
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George Githinji", "Pascal Betz"]
-  s.date = "2012-02-27"
+  s.date = "2012-03-01"
   s.description = "A bioruby plugin for calculating the isoelectric point of a protein "
   s.email = "georgkam@gmail.com"
   s.extra_rdoc_files = [
